@@ -44,7 +44,7 @@ for rse in rse_names:
     try:
         client.add_rse_attribute(rse,'freespace',freespace)
         print(f"{rse} Freespace : {(freespace / 1e12):.1f} TB")
-     except AccessDenied:
+     except AccessDenied as e:
         print(e)
 
 
